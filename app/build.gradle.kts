@@ -19,7 +19,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures{
+        viewBinding = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -61,7 +63,7 @@ dependencies {
     // Lifecycle components
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation("androidx.lifecycle:lifecycle-common-java8:2.7.0")
-    implementation ("androidx.lifecycle:lifecycle-view-model-ktx:2.2.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
     // Kotlin components
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22")
