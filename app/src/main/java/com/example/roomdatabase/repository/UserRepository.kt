@@ -1,6 +1,8 @@
-package com.example.roomdatabase.data
+package com.example.roomdatabase.repository
 
 import androidx.lifecycle.LiveData
+import com.example.roomdatabase.model.User
+import com.example.roomdatabase.data.UserDao
 
 /* use repository to abstract accesss to multiple data sources
 suggested best practice for code separation

@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupActionBarWithNavController(findNavController(R.id.fragmentContainer))
+        //setupActionBarWithNavController(findNavController(R.id.fragmentContainer))
     }
 }
