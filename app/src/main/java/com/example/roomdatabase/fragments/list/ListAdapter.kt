@@ -2,6 +2,7 @@ package com.example.roomdatabase.fragments.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomdatabase.model.User
 import com.example.roomdatabase.databinding.CustomRowBinding
@@ -24,9 +25,12 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = userList[position]
         holder.bind(currentItem)
 
-//        holder._binding.rowLayout.setOnClickListener{
-//            val action = ListFragmentDirections.actionListFragmentToAddFragment()
-//        }
+        holder._binding.rowLayout.setOnClickListener{
+            // passing the data from the item in the list to the update fragment
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            // itemView comes from the ViewHolder library
+            holder.itemView.findNavController().navigate(action)
+        }
 
     }
     class MyViewHolder(val _binding: CustomRowBinding): RecyclerView.ViewHolder(_binding.root){
