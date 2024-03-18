@@ -107,7 +107,7 @@ class UpdateFragment : Fragment() {
         // title of the alert box
         builder.setTitle("Delete ${args.currentUser.firstName}?")
         // message inside alert box above positive and negative buttons
-        builder.setMessage("Are you sure you want to delte ${args.currentUser.firstName}?")
+        builder.setMessage("Are you sure you want to delete ${args.currentUser.firstName}?")
         // create and show the alert box
         builder.create().show()
     }
